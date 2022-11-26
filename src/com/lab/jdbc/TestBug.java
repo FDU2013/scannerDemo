@@ -48,10 +48,10 @@ public class TestBug {
         Statement statement = conn.createStatement();
 
         //create table
-        String r_sql_init = new BufferedReader(new FileReader(new File(ROOM_SQL))).readLine();
+        String r_sql_init = "CREATE TABLE IF NOT EXISTS room (kdno INTEGER, kcno INTEGER, ccno INTEGER, kdname VARCHAR(20), exptime DATETIME, papername VARCHAR(20), PRIMARY KEY (kdno, kcno, ccno));";
         statement.execute(r_sql_init);
 
-        String s_sql_init = new BufferedReader(new FileReader(new File(STUDENT_SQL))).readLine();
+        String s_sql_init = "CREATE TABLE IF NOT EXISTS student (registno VARCHAR(20), name VARCHAR(20), kdno INTEGER, kcno INTEGER, ccno INTEGER, seat INTEGER, PRIMARY KEY (registno), FOREIGN KEY (kdno, kcno, ccno) REFERENCES room (kdno, kcno, ccno));";
         statement.execute(s_sql_init);
 
         //read room.csv
