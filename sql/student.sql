@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS student (registno VARCHAR(20), name VARCHAR(20), kdno INTEGER, kcno INTEGER, ccno INTEGER, seat INTEGER, PRIMARY KEY (registno), FOREIGN KEY (kdno, kcno, ccno) REFERENCES room (kdno, kcno, ccno));

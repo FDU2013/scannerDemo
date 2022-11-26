@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS room (kdno INTEGER, kcno INTEGER, ccno INTEGER, kdname VARCHAR(20), exptime DATETIME, papername VARCHAR(20), PRIMARY KEY (kdno, kcno, ccno));
