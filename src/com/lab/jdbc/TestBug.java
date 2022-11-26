@@ -27,6 +27,8 @@ public class TestBug {
 
         Class.forName("com.mysql.cj.jdbc.Driver");
 
+        System.out.println("Add independent print");
+
         Scanner objIn = new Scanner(System.in);
         System.out.println("Enter url following the prescribed format. e.g. \njdbc:mySql://localhost:3306/lab1");
         String url =  objIn.nextLine();
